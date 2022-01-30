@@ -21,8 +21,8 @@ class ProtocolStateMachine {
     }
     const transition = this.definition.transitions.find(t => t.from === this.state.name && t.message === message.name)
     const nextState = this.definition.states.find(s => s.name === transition.to)
-    await transition.onMessage(message.payload)
-    this.state = nextState
+    const result = await transition.onMessage(message.payload)
+    if (result) this.state = nextState
   }
 
   _addLog (buffer) {
@@ -38,7 +38,6 @@ class ProtocolStateMachine {
         const decodedMessage = c.decode(messages[i].type, buffer)
         return { name: messages[i].name, payload: decodedMessage }
       } catch (err) {
-        console.log(err)
       }
     }
   }
