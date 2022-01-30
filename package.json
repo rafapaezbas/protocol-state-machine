@@ -1,0 +1,25 @@
+{
+  "name": "protocol-state-machine",
+  "version": "0.0.1",
+  "description": "communication protocol definition helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "standard --fix"
+  },
+  "keywords": [
+    "protocol",
+    "state",
+    "machine",
+    "communication"
+  ],
+  "author": "rafapaezbas",
+  "license": "ISC",
+  "dependencies": {
+    "compact-encoding": "^2.5.1",
+    "compact-encoding-struct": "^1.2.0"
+  },
+  "devDependencies": {
+    "standard": "^16.0.4"
+  }
+}
