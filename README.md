@@ -1,6 +1,6 @@
 # Protocol-state-machine
 
-Define messages, states and transitions of communication protocol.
+Definition of messages, states and transitions for communication protocols.
 
 ## How to use this:
 
